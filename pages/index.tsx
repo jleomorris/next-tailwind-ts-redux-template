@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import homeStyles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -11,15 +11,28 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='text-center'>
-        <h1 className='text-5xl font-bold'>
-          Welcome to this{' '}
-          <a href='https://nextjs.org' className='text-blue-500'>
+      <main className='text-center p-24'>
+        <h1 className='text-8xl font-bold'>
+          <a href='https://nextjs.org' className='text-purple-500'>
             Next, TypeScript, Tailwind, Redux Toolkit
           </a>{' '}
           template
         </h1>
-        {/* <p>Start by adding new pages or redux slices</p> */}
+        <ul className='my-10 space-y-5'>
+          <li className='text-3xl'>
+            Update homepage at{' '}
+            <code className={homeStyles.code}>pages/index.js</code>
+          </li>
+          <li className='text-3xl'>
+            Add pages to <code className={homeStyles.code}>pages/...</code>
+          </li>
+          <li className='text-3xl'>
+            Add redux slices to{' '}
+            <code className={homeStyles.code}>features/...</code>
+          </li>
+        </ul>
+        {/* <p className='my-10'>
+        </p> */}
       </main>
     </div>
   );
